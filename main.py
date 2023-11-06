@@ -14,7 +14,6 @@ def get_birthdays_per_week(users: list):
         tmp_delta = timedelta(days=(7))
         #Changing year to compare properly
         if tmp_date.year < TODAY.year:
-            #tmp_date = datetime(TODAY.year + 1, tmp_date.month,tmp_date.day).date()
             tmp_date = tmp_date.replace(year=(TODAY.year + 1))
         #Checking if we are not out of bounds(aka the next week)
         if (tmp_date >= TODAY) and (tmp_date - TODAY) <= tmp_delta:
