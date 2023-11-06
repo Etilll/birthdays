@@ -22,10 +22,12 @@ def get_birthdays_per_week(users: list):
                     RESULT['Monday'].append(dic["name"])
 
     #Removing leftover (empty) days.
-    res_copy = RESULT
-    for k,v in res_copy.items():
+    to_remove = []
+    for k,v in RESULT.items():
         if v == []:
-            del RESULT[k]
+            to_remove.append(k)
+    for i in to_remove:
+        del RESULT[i]
     
     return(RESULT)
 
