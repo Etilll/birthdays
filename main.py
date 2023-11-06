@@ -22,7 +22,7 @@ def get_birthdays_per_week(users: list):
                 elif tmp_date.weekday() >= 5:
                     RESULT['Monday'].append(dic["name"])
 
-    #Removing leftover [empty] days.
+    #Removing leftover (empty) days.
     to_remove = []
     for k,v in RESULT.items():
         if v == []:
