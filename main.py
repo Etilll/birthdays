@@ -5,7 +5,6 @@ def get_birthdays_per_week(users: list):
     RESULT = {'Monday':[],'Tuesday"':[],'Wednesday':[],'Thursday':[],'Friday':[]}
     TODAY = date.today() 
 
-
     # Empty table exception
     if len(users) < 1:
         return {}
